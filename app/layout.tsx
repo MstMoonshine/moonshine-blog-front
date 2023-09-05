@@ -1,4 +1,4 @@
-import './globals.css'
+import "@/styles/global.css";
 import type { Metadata } from 'next'
 import metajson from '../data/meta.json'
 import Header from "@/components/UI/Website/Header"

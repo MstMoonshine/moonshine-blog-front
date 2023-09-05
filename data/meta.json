@@ -1,4 +1,16 @@
 {
     "title": "Moonshine Blog",
-    "description": "On a long march of reasoning"
+    "description": "Join me on a long march of reasoning",
+    "header": {
+        "logo": "Moonshine Blog",
+        "sublogo": "196884"
+    },
+    "author": {
+        "name": "Moonshine",
+        "email": "mingde-ren@outlook.com"
+    },
+    "year": "2023",
+    "pages": [
+        { "name": "Home", "url": "/" }
+    ]
 }
