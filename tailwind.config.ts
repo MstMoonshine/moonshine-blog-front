@@ -63,18 +63,18 @@ module.exports = {
           light: "rgb(152, 78, 187)",
         },
       },
-      typography: theme => ({
-        DEFAULT: {
-          css: {
-            "code::before": {
-              content: '""',
-            },
-            "code::after": {
-              content: '""',
-            },
-          },
-        },
-      }),
+      // typography: theme => ({
+      //   DEFAULT: {
+      //     css: {
+      //       "code::before": {
+      //         content: '""',
+      //       },
+      //       "code::after": {
+      //         content: '""',
+      //       },
+      //     },
+      //   },
+      // }),
     },
   },
   plugins: [

@@ -9,7 +9,10 @@ import {
 
 import { useSpring, animated } from "@react-spring/web";
 
-const MobileNavigation = ({ showMenu, toggleMenuFn }) => {
+const MobileNavigation = ({ showMenu, toggleMenuFn }: {
+  showMenu: boolean,
+  toggleMenuFn: () => void
+}) => {
   const springs = useSpring({
     opacity: showMenu ? 1 : 0,
     height: showMenu ? "40vh" : "0vh",
@@ -51,7 +54,12 @@ const MobileNavigation = ({ showMenu, toggleMenuFn }) => {
   );
 };
 
-const MobileNavItem = ({ url, name, Icon, toggleMenuFn }) => (
+const MobileNavItem = ({ url, name, Icon, toggleMenuFn }: {
+  url: string,
+  name: string,
+  Icon: any,
+  toggleMenuFn: () => void
+}) => (
   <Link
     href={url}
     className="flex flex-col items-center rounded-lg px-4 py-6 hover:bg-white/5"

@@ -3,7 +3,9 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 import { FC } from "react";
 import metadata from "@/data/meta.json";
 
-const NavigationView = ({ toggleMenuFn }) => {
+const NavigationView = ({ toggleMenuFn }: {
+  toggleMenuFn: () => void
+}) => {
   return (
     <div>
       {/* Desktop View */}

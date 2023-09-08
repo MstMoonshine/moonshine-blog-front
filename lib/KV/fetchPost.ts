@@ -37,4 +37,3 @@ export default async function AllPosts(): Promise<Post[]> {
 
     return post_list;
 }
-

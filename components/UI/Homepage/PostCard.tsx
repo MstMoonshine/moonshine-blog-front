@@ -6,6 +6,12 @@ const PostCard = ({
   date,
   summary,
   showSummary = false,
+}: {
+  title: string,
+  url: string,
+  date: string,
+  summary?: string,
+  showSummary?: boolean,
 }) => {
   return (
     <div
