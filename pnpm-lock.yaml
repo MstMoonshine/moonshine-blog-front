@@ -79,12 +79,21 @@ devDependencies:
   '@tailwindcss/typography':
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.3.3)
+  bufferutil:
+    specifier: ^4.0.7
+    version: 4.0.7
   rehype-mathjax:
     specifier: ^4.0.3
-    version: 4.0.3(canvas@2.11.2)
+    version: 4.0.3(bufferutil@4.0.7)(canvas@2.11.2)(utf-8-validate@6.0.3)
   remark-math:
     specifier: ^5.1.1
     version: 5.1.1
+  utf-8-validate:
+    specifier: ^6.0.3
+    version: 6.0.3
+  ws:
+    specifier: ^8.14.0
+    version: 8.14.0(bufferutil@4.0.7)(utf-8-validate@6.0.3)
 
 packages:
 
@@ -1049,6 +1058,14 @@ packages:
   /buffer-from@1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
     dev: false
+
+  /bufferutil@4.0.7:
+    resolution: {integrity: sha512-kukuqc39WOHtdxtw4UScxF/WVnMFVSQVKhtx3AjZJzhd0RGZZldcrfSEbVsWWe6KNH253574cq5F+wpv0G9pJw==}
+    engines: {node: '>=6.14.2'}
+    requiresBuild: true
+    dependencies:
+      node-gyp-build: 4.6.1
+    dev: true
 
   /bundle-name@3.0.0:
     resolution: {integrity: sha512-PKA4BeSvBpQKQ8iPOGCSiell+N8P+Tf1DlwqmYhpe2gAhKPHn8EYOxVT+ShuGmhg8lN8XiSlS80yiExKXrURlw==}
@@ -2563,7 +2580,7 @@ packages:
       argparse: 2.0.1
     dev: false
 
-  /jsdom@20.0.3(canvas@2.11.2):
+  /jsdom@20.0.3(bufferutil@4.0.7)(canvas@2.11.2)(utf-8-validate@6.0.3):
     resolution: {integrity: sha512-SYhBvTh89tTfCD/CRdSOm13mOBa42iTaTyfyEWBdKcGdPxPtLFBXuHR8XHb33YNYaP+lLbmSvBTsnoesCNJEsQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -2597,7 +2614,7 @@ packages:
       whatwg-encoding: 2.0.0
       whatwg-mimetype: 3.0.0
       whatwg-url: 11.0.0
-      ws: 8.13.0
+      ws: 8.14.0(bufferutil@4.0.7)(utf-8-validate@6.0.3)
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -3301,6 +3318,11 @@ packages:
     dependencies:
       whatwg-url: 5.0.0
 
+  /node-gyp-build@4.6.1:
+    resolution: {integrity: sha512-24vnklJmyRS8ViBNI8KbtK/r/DmXQMRiOMXTNz2nrTnAYUwjmEEbnnpB/+kt+yWRv73bPsSPRFddrcIbAxSiMQ==}
+    hasBin: true
+    dev: true
+
   /node-releases@2.0.13:
     resolution: {integrity: sha512-uYr7J37ae/ORWdZeQ1xxMJe3NtdmqMC/JZK+geofDrkLUApKRHPd18/TxtBOJ4A0/+uUIliorNrfYV6s1b02eQ==}
     dev: false
@@ -3726,14 +3748,14 @@ packages:
       unist-util-visit: 4.1.2
     dev: false
 
-  /rehype-mathjax@4.0.3(canvas@2.11.2):
+  /rehype-mathjax@4.0.3(bufferutil@4.0.7)(canvas@2.11.2)(utf-8-validate@6.0.3):
     resolution: {integrity: sha512-QIwWH9U+r54nMQklVkT1qluxhKyzdPWz9dFwgel3BrseQsWZafRTDTUj8VR8/14nFuRIV2ChuCMz4zpACPoYvg==}
     dependencies:
       '@types/hast': 2.3.5
       '@types/mathjax': 0.0.37
       hast-util-from-dom: 4.2.0
       hast-util-to-text: 3.1.2
-      jsdom: 20.0.3(canvas@2.11.2)
+      jsdom: 20.0.3(bufferutil@4.0.7)(canvas@2.11.2)(utf-8-validate@6.0.3)
       mathjax-full: 3.2.2
       unified: 10.1.2
       unist-util-visit: 4.1.2
@@ -4456,6 +4478,14 @@ packages:
       requires-port: 1.0.0
     dev: true
 
+  /utf-8-validate@6.0.3:
+    resolution: {integrity: sha512-uIuGf9TWQ/y+0Lp+KGZCMuJWc3N9BHA+l/UmHd/oUHwJJDeysyTRxNQVkbzsIWfGFbRe3OcgML/i0mvVRPOyDA==}
+    engines: {node: '>=6.14.2'}
+    requiresBuild: true
+    dependencies:
+      node-gyp-build: 4.6.1
+    dev: true
+
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
@@ -4636,8 +4666,8 @@ packages:
   /wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  /ws@8.13.0:
-    resolution: {integrity: sha512-x9vcZYTrFPC7aSIbj7sRCYo7L/Xb8Iy+pW0ng0wt2vCJv7M9HOMy0UoN3rr+IFC7hb7vXoqS+P9ktyLLLhO+LA==}
+  /ws@8.14.0(bufferutil@4.0.7)(utf-8-validate@6.0.3):
+    resolution: {integrity: sha512-WR0RJE9Ehsio6U4TuM+LmunEsjQ5ncHlw4sn9ihD6RoJKZrVyH9FWV3dmnwu8B2aNib1OvG2X6adUCyFpQyWcg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -4647,6 +4677,9 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
+    dependencies:
+      bufferutil: 4.0.7
+      utf-8-validate: 6.0.3
     dev: true
 
   /xml-name-validator@4.0.0:
