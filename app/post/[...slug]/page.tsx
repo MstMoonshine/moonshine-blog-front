@@ -1,6 +1,6 @@
 import env from '../../../.env.json';
 import { serialize } from 'next-mdx-remote/serialize';
-import MDXContent from '@/components/Wrapper/remote-mdx-wrapper';
+import MDXContent from '@/components/wrapper/remote-mdx-wrapper';
 import remarkMath from "remark-math";
 // import rehypeKatex from "rehype-katex";
 import rehypeMathjax from 'rehype-mathjax'

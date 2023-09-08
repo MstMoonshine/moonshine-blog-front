@@ -1,5 +1,3 @@
-// according to https://github.com/hashicorp/next-mdx-remote/issues/307
-
 "use client";
 
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote";
