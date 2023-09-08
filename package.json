@@ -27,8 +27,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rehype-katex": "^6.0.3",
-    "rehype-mathjax": "^4.0.3",
-    "remark-math": "^5.1.1",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
   },
@@ -36,6 +34,8 @@
     "@heroicons/react": "^2.0.18",
     "@react-spring/web": "^9.7.3",
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/typography": "^0.5.10"
+    "@tailwindcss/typography": "^0.5.10",
+    "rehype-mathjax": "^4.0.3",
+    "remark-math": "^5.1.1"
   }
 }
