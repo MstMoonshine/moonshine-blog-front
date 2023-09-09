@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "now-build": "yum install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && pnpm run build"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",
@@ -17,7 +18,6 @@
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
-    "canvas": "^2.11.2",
     "date-fns": "^2.30.0",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.13",
@@ -36,6 +36,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.10",
     "bufferutil": "^4.0.7",
+    "canvas": "^2.11.2",
     "rehype-mathjax": "^4.0.3",
     "remark-math": "^5.1.1",
     "utf-8-validate": "^6.0.3",
