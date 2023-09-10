@@ -2,9 +2,11 @@ import env from '../../../.env.json';
 import { serialize } from 'next-mdx-remote/serialize';
 import MDXContent from '@/components/wrapper/remote-mdx-wrapper';
 import remarkMath from "remark-math";
-// import rehypeKatex from "rehype-katex";
+import rehypeKatex from 'rehype-katex';
 import rehypeMathjax from 'rehype-mathjax'
 import { getPostContent } from '@/lib/KV/fetchPost';
+
+// TODO: use mathjax
 
 async function replaceFigureUrl(content: string, key: string) {
   const match = content.replace(/\!\[([^\]]*)\]\((\S+)\)/g, "![$1](" + env['post-worker'] + "content/" + key + "/$2)");
@@ -17,7 +19,7 @@ async function processContent(content: string, key: string) {
   const source = await serialize(updatedContent, {
     mdxOptions: {
       remarkPlugins: [remarkMath],
-      rehypePlugins: [rehypeMathjax]
+      rehypePlugins: [rehypeKatex]
     },
     parseFrontmatter: true,
   });

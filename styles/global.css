@@ -169,3 +169,7 @@ pre {
 .math-inline {
     @apply inline-block align-middle;
 }
+
+.katex-html {
+  display: none;
+}
