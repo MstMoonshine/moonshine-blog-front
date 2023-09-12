@@ -1,4 +1,4 @@
-import Post from '@/lib/Post/Post';
+import Post from '@/lib/Post/post';
 import AllPosts from '@/lib/KV/fetchPost';
 import PostCard from './PostCard';
 import { format, parseISO } from 'date-fns';
