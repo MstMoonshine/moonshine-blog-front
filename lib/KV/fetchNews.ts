@@ -9,6 +9,5 @@ export default async function AllNews(): Promise<NewsEntry[]> {
         var news_entry: NewsEntry = JSON.parse(news_entry_json);
         return news_entry;
     });
-    console.log("news_list", news_list );
     return news_list;
 }

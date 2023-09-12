@@ -1,5 +1,4 @@
 import PageTitle from "@/components/UI/Website/PageTitle";
-import { NewsSummary } from "@/components/wrapper/news-summary-wrapper";
 import AllNews from "@/lib/KV/fetchNews";
 import Link from "next/link";
 
