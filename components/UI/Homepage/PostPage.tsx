@@ -1,10 +1,10 @@
-import Post from '@/lib/Post/post';
+import PostEntry from '@/lib/PostEntry/PostEntry';
 import AllPosts from '@/lib/KV/fetchPost';
 import PostCard from './PostCard';
 import { format, parseISO } from 'date-fns';
 
 export default async function PostPage() {
-  const posts: Post[] = await AllPosts()
+  const posts: PostEntry[] = await AllPosts()
   .then(posts => posts.filter(post => !post.draft)) // filter out drafts
   .then((posts) => (
     posts.sort((a, b) => (                          // sort by date
