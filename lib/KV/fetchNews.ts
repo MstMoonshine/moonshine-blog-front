@@ -1,5 +1,5 @@
 import env from '../../.env.json';
-import NewsEntry from '../NewsEntry/newsEntry';
+import NewsEntry from '@/lib/NewsEntry/newsEntry';
 
 export default async function AllNews(): Promise<NewsEntry[]> {
     const url = env['news-worker'];
