@@ -37,6 +37,7 @@
     "bufferutil": "^4.0.7",
     "rehype-mathjax": "^4.0.3",
     "remark-math": "^5.1.1",
+    "twemoji": "^14.0.2",
     "utf-8-validate": "^6.0.3",
     "ws": "^8.14.0"
   }

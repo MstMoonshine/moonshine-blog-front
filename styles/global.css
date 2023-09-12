@@ -173,3 +173,20 @@ pre {
 .katex-html {
   display: none;
 }
+
+.news-summary:not(a) {
+  display: grid;
+  grid-template-areas: "a a";
+  grid-auto-columns: auto;
+  gap: 20px;
+}
+
+.news-summary > img {
+  grid-auto-columns: auto;
+  width: 13rem;
+  margin-top: 14px;
+}
+
+.news-summary > a {
+  display: contents;
+}

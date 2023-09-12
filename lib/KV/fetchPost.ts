@@ -1,5 +1,5 @@
 import env from '../../.env.json';
-import Post from '../Post/post';
+import Post from '../Post/Post';
 
 async function fetchPostList() {
     const url = env['post-worker'] + 'posts';

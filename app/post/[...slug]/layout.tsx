@@ -1,6 +1,6 @@
 import Prose from "@/components/Layouts/Prose";
 import AllPosts from "@/lib/KV/fetchPost";
-import Post from "@/lib/Post/post";
+import Post from "@/lib/Post/Post";
 import { format, parseISO } from "date-fns";
 
 export default async function BlogLayout({
