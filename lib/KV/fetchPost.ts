@@ -1,5 +1,5 @@
 import env from '../../.env.json';
-import Post from '../Post/post';
+import PostEntry from '../PostEntry/PostEntry';
 
 async function fetchPostList() {
     const url = env['post-worker'] + 'posts';
@@ -26,11 +26,11 @@ export async function getPostContent(key: string) {
     return post_content;
 }
 
-export default async function AllPosts(): Promise<Post[]> {
+export default async function AllPosts(): Promise<PostEntry[]> {
     const key_list = await fetchPostList();
-    const post_list: Post[]= await Promise.all(key_list.map(async (key: string) => {
+    const post_list: PostEntry[]= await Promise.all(key_list.map(async (key: string) => {
         const post_meta_json = await getPostMeta(key);
-        var post_meta: Post = JSON.parse(post_meta_json);
+        var post_meta: PostEntry = JSON.parse(post_meta_json);
         post_meta.key = key;
         return post_meta;
     }));

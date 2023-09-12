@@ -1,4 +1,4 @@
-export default interface Post {
+export default interface PostEntry {
     title: string,
     date: string,
     key: string,
