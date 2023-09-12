@@ -13,7 +13,7 @@ const Page = async () => {
       </p>
       <div className="rounded-lg bg-white p-4">
         <h2 className="px-2 pb-4 font-title text-2xl font-bold">
-          Last Week Readings
+          Readings of Last 14 Days
         </h2>
         {newsEntries.map((entry) => (
           <Link href={entry.url} key={entry.title}>
