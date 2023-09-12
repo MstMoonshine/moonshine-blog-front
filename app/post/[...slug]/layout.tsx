@@ -1,6 +1,6 @@
 import Prose from "@/components/Layouts/Prose";
 import AllPosts from "@/lib/KV/fetchPost";
-import Post from "@/lib/Post/post";
+import PostEntry from "@/lib/PostEntry/PostEntry";
 import { format, parseISO } from "date-fns";
 
 export default async function BlogLayout({
@@ -10,7 +10,7 @@ export default async function BlogLayout({
   children: React.ReactNode;
   params: { slug: string[] };
 }) {
-  const post: Post | undefined = (await AllPosts()).find(p => p['key'] == params.slug.join('/'));
+  const post: PostEntry | undefined = (await AllPosts()).find(p => p['key'] == params.slug.join('/'));
 
   if (!post) {
     return <div>404</div>;
