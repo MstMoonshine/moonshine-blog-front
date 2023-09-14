@@ -174,19 +174,31 @@ pre {
   display: none;
 }
 
-.news-summary:not(a) {
+.news-summary-desk > a,tt {
+  display: contents;
+}
+
+.news-summary-desk-with-img:not(a) {
   display: grid;
-  grid-template-areas: "a a";
+  grid-template-areas: "a b";
   grid-auto-columns: auto;
   gap: 20px;
 }
 
-.news-summary > img {
+.news-summary-desk-with-img > img {
   grid-auto-columns: auto;
   width: 13rem;
   margin-top: 14px;
 }
 
-.news-summary > a {
-  display: contents;
+.news-summary-mobile:not(a) {
+  gap: 20px;
+}
+
+.news-summary-mobile > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 14px;
+  width: 85%;
 }

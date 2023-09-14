@@ -1,6 +1,6 @@
+import Card from "@/components/UI/Readings/NewsCard";
 import PageTitle from "@/components/UI/Website/PageTitle";
 import AllNews from "@/lib/KV/fetchNews";
-import Link from "next/link";
 
 const Page = async () => {
   const newsEntries = await AllNews();
@@ -16,19 +16,7 @@ const Page = async () => {
           Readings of Last 14 Days
         </h2>
         {newsEntries.map((entry) => (
-          <Link href={entry.url} key={entry.title}>
-            <div className="flex items-center px-1 py-3 transition-all hover:bg-gray-50">
-              <div className="min-w-0 flex-grow">
-                <p>
-                  <span className="font-bold text-xl">{entry.title}</span>
-                </p>
-                <div className="news-summary py-1" dangerouslySetInnerHTML={{ __html: entry.summary ? entry.summary : "" }}></div>
-              </div>
-              <p className="flex-shrink-0 font-mono text-xs text-gray-500 sm:text-sm">
-                {(new Date(entry.date)).toLocaleDateString()}
-              </p>
-            </div>
-          </Link>
+          <Card entry={entry} key={entry.title} />
         ))}
       </div>
     </div>
