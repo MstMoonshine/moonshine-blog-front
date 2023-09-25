@@ -17,10 +17,9 @@ async function getPostMeta(key: string) {
 }
 
 export async function getPostContent(key: string) {
-    console.log("key", key);
-
     const url = env['post-worker'] + 'content/' + key + '/index.md';
-    const res = await fetch(url, { next: { revalidate: 600 } });
+    const md_res = await fetch(url, { next: { revalidate: 600 } });
+    const res = md_res.status === 200 ? md_res : await fetch(url + 'x', { next: { revalidate: 600 } }); // mdx file
     const post_content = await res.text();
 
     return post_content;
