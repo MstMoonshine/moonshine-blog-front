@@ -6,6 +6,7 @@ import Footer from "@/components/UI/Website/Footer"
 import { Lato } from "next/font/google";
 import { Noto_Sans_SC } from "next/font/google";
 import { Fira_Sans } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = metajson;
 
@@ -46,6 +47,7 @@ export default function RootLayout({
           <div className="mx-auto max-w-4xl px-2">{children}</div>
         </main>
         <Footer />
+	<Analytics />
       </body>
     </html>
   )
